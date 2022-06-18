@@ -33,10 +33,10 @@ jobs:
     - run: npm test
     - uses: actions/upload-artifact@main
       with:
-    needs: build
+        needs: build
         path: public/
-      - uses: actions/upload-artifact@master
-        with:
+    - uses: actions/upload-artifact@master
+      with:
           name: webpack artifacts
           path: public/
   test:
